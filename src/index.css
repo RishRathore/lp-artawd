@@ -273,6 +273,11 @@ ul {
   width: 90%;
   display: inline-block;
 }
+
+.answer-list > li > a {
+  color: 'black' !important;
+}
+
 .steps-quize-section .btn {
   color: #fff;
   background: #fbdf8c;
