@@ -296,6 +296,31 @@ ul {
   display: inline-block;
   border-bottom: 3px solid #ffc107;
 }
+.steps-quize-section .btn span {
+  color: #00080c;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
 
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #08671e!important;
+    color: #fff!important;
+    width: 80%;
+    font-size: 19px;
+    border: solid 1px;
+    padding: 5px;
+}
+.submit-button {
+  background: #ffc107!important;
+  color: #fff;
+  width: 80%;
+  font-size: 24px;
+  padding: 4px;
+  border: solid 1px;
+}
 /* ===================== */
 
