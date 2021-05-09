@@ -1,13 +1,296 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Tajawal', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  position: relative;
+  font-family: 'Tajawal', sans-serif;
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+  direction: rtl;
+  text-align: right;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
 }
+
+
+/* Style the header */
+header {
+  display: block;
+}
+.hallal {
+  position: absolute;
+  width: 67px;
+  padding: 55px 10px 10px;
+  background: #E36E1F;
+  border-radius: 0 0 4px 4px;
+  top: -50px;
+  left: 5%;
+  cursor: pointer;}
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.topnav {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+ .logo {
+    width: 165px;
+    float: right !important;
+}
+
+.header-hero {
+  padding: 50px 0 100px 0;
+}
+.right-hero {
+  padding: 0;
+  float: right;
+}
+.right-hero h3 {
+  position: relative;
+  display: block;
+  margin: 0 0 15px;
+  padding: 0 0 15px;
+  color: #E36E1F;
+  line-height: 1.6;
+  font-size: 30px;
+  font-family: inherit;
+}
+.right-hero h3:after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #E36E1F;
+  bottom: 0;
+  right: 0;
+}
+.members-count {
+  display: inline-block;
+  margin: 10px 0 0 0;
+  padding: 10px 15px 10px 5px;
+  background: #E36E1F;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  border-bottom: 2px solid #ffc107;
+  float: right;
+}
+.members-count span {
+  padding: 7px 15px;
+  background: #ffc107;
+  margin: 0 15px 0 0;
+  border-radius: 4px;
+}
+.right-hero p {
+  color: #3c3c3c;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 1.8;
+  font-weight: 500;
+}
+.header-overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0 0 0;
+  background: rgba(255, 255, 255) url('image/bm.png') no-repeat;
+  background-position: left 100px bottom;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+.logo-content {
+  text-align: right !important; width: 100%;
+  font-size: 15px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #343a40!important;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-family: 'Tajawal', sans-serif;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+a {
+    color: white;
+}
+.questionBox {
+  max-width: 400px;
+  margin: -47px 0 0 0;
+  padding: 0;
+  background: #000;
+}
+.steps-quize-section {
+  background: #f9f9f9;
+}
+.section-facebook-comment {
+  background: #fff;
+  padding: 50px 15px;
+  font-family: arial;
+}
+.top-title {
+  display: block;
+  margin: 0 0 20px 0;
+  font-family: 'Tajawal', sans-serif;
+}
+.top-title span {
+  display: inline-block;
+  font-size: 22px;
+  margin: 0 10px 0 0;
+  color: #E36E1F;
+  font-weight: 500;
+}
+.row-stats ul.stats-bar {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #eeeff4;
+  border-bottom: 1px solid white;
+}
+.stats-bar li {
+  display: inline-block;
+}
+.comment-line {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #eeeff4;
+  border-bottom: 2px solid white;
+}
+.comment-line:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+.user-avatar {
+  float: right;
+  width: 45px;
+}
+.comment-details {
+  padding-right: 65px;
+}
+.comment-details h3 {
+  margin: 0 0 5px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #3b5998;
+}
+.section-facebook-comment .comment-line .comment-details ul li a {
+  display: inline-block;
+  color: #3b5998;
+  margin: 0 0 0 10px;
+}
+.questionBox {
+  max-width: 400px;
+  margin: -47px 0 0 0;
+  padding: 0;
+  background: #000;
+}
+.steps-quize-section .content-box {
+  position: relative;
+  background: #28a745;
+}
+.fade {
+  background: rgba(250, 250, 250, 0.3) none repeat scroll 0 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  display: none;
+  z-index: 999999;
+}
+.questions {
+  text-align: center;
+}
+.question-number {
+  font-size: 21px;
+  display: block;
+  background: #E36E1F;
+  margin: 0;
+  padding: 10px 15px;
+  color: #fff;
+  border-bottom: 2px solid #ffc107;
+}
+.question-text {
+  padding: 15px 10px 20px;
+  font-size: 20px;
+  color: #ffffff;
+}
+.steps-quize-section .question ul {
+  padding: 0;
+}
+
+.steps-quize-section .answer-list {
+  text-align: center;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.answer-list li {
+  margin-bottom: 15px;
+  width: 90%;
+  display: inline-block;
+}
+.steps-quize-section .btn {
+  color: #fff;
+  background: #fbdf8c;
+  border-radius: 4px;
+  width: 90%;
+  padding: 0;
+  line-height: 44px;
+  cursor: pointer;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  border-bottom: 3px solid #ffc107;
+}
+
+/* ===================== */
+
