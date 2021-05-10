@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { useHistory } from 'react-router-dom'
 import Header from './Header'
 import CommentsBlock from './CommentsBlock'
 import Footer from './Footer'
@@ -18,6 +19,7 @@ let userInfo = {
 const MainPage = () => {
   const [step, setStep] = useState(1)
   const [formData, setData] = useState({ ...userInfo })
+  const history = useHistory()
 
   const setAnswer = (event) => {
     const answer = event?.currentTarget && event.currentTarget?.text ? event.currentTarget?.text : null
@@ -48,14 +50,18 @@ const MainPage = () => {
     if (formData.email && formData.fullname && formData.phone && formData.age) {
       emailjs.send(serviceId, templateId, formData, userId)
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('success')
+        console.log('SUCCESS!', response.status, response?.text);
         setData({...userInfo}) //reset form
+        history.push('/thanks')
       }, (err) => {
         console.log('FAILED...', err);
         alert('something went wrong')
       });
-    } else alert('please fill all input fields correctly !!')
+    } else {
+      if (!formData.email) setStep(4)
+      if (!formData.age) setStep(5)
+      alert('please fill all input fields correctly !!')
+    }
   }
 
   return (
