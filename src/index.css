@@ -322,5 +322,39 @@ input {
   padding: 4px;
   border: solid 1px;
 }
-/* ===================== */
 
+
+
+
+.halal-options {
+  position: relative;
+  width: 100%;
+  max-height: fit-content;
+  padding: 40px 15px;
+  background: #E36E1F url(image/bmo-2.png) no-repeat;
+  background-position: right top;
+}
+.mr-auto, .mx-auto {
+  margin-right: auto!important;
+}
+.halal-options ul li {
+  position: relative;
+  display: inline-block;
+  width: 45%;
+  margin: 0 0 15px;
+  padding: 0 15px 0 0;
+  font-weight: 500;
+  color: #fff;
+}
+.halal-options ul li:before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+/* ===================== */
