@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import Header from './Header'
 import CommentsBlock from './CommentsBlock'
 import Footer from './Footer'
@@ -40,7 +41,21 @@ const MainPage = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    console.log('data', formData)
+    const serviceId = process.env.REACT_APP_MAIL_SERVICE_ID
+    const templateId = process.env.REACT_APP_MAIL_TEMPLATE_ID
+    const userId = process.env.REACT_APP_MAIL_USER_ID
+
+    if (formData.email && formData.fullname && formData.phone && formData.age) {
+      emailjs.send(serviceId, templateId, formData, userId)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('success')
+        setData({...userInfo}) //reset form
+      }, (err) => {
+        console.log('FAILED...', err);
+        alert('something went wrong')
+      });
+    } else alert('please fill all input fields correctly !!')
   }
 
   return (
