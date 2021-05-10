@@ -17,9 +17,9 @@ const Thankyou = () => (
       </div>
       <br />
       <div >
-      <a href="#" data-api="smartsupp" data-operation="open">
-        <img src="http://tamifamarketing.com/chat.png" width="60%" data-api="smartsupp" data-operation="open" />
-      </a>
+      <span data-api="smartsupp" data-operation="open">
+        <img src="http://tamifamarketing.com/chat.png" width="60%" data-api="smartsupp" data-operation="open" alt='icon' />
+      </span>
     </div>
   </div>
 )

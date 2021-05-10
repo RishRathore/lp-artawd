@@ -22,7 +22,8 @@ const MainPage = () => {
   const history = useHistory()
 
   const setAnswer = (event) => {
-    const answer = event?.currentTarget && event.currentTarget?.text ? event.currentTarget?.text : null
+    debugger
+    const answer = event?.target && event.target?.innerText ? event.target?.innerText : ''
 
     switch (step) {
       case 1: setData({ ...formData, socialStatus: answer.trim() }); break;
@@ -47,6 +48,7 @@ const MainPage = () => {
     const templateId = process.env.REACT_APP_MAIL_TEMPLATE_ID
     const userId = process.env.REACT_APP_MAIL_USER_ID
 
+    console.log('data', formData)
     if (formData.email && formData.fullname && formData.phone && formData.age) {
       emailjs.send(serviceId, templateId, formData, userId)
       .then((response) => {
@@ -82,10 +84,10 @@ const MainPage = () => {
                       <div class="answers">
                         <ul class="answer-list">
                           <ul class="answer-list">
-                            <li> <a class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-up"></i>موظف(ة) عادي أبحث عن دخل اضافي</span></a></li>
-                            <li> <a class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-down"></i>  عاطل(ة) عن العمل أبحث عن دخل مادي </span></a></li>
-                            <li> <a class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-down"></i> رجل /سيدة أعمال أبحث عن فرص جديدة</span></a></li>
-                            <li> <a class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-down"></i> متقاعد (ة) وأريد أن أستثمر وقتي </span></a></li>
+                            <li> <button class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-up"></i>موظف(ة) عادي أبحث عن دخل اضافي</span></button></li>
+                            <li> <button class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-down"></i>  عاطل(ة) عن العمل أبحث عن دخل مادي </span></button></li>
+                            <li> <button class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-down"></i> رجل /سيدة أعمال أبحث عن فرص جديدة</span></button></li>
+                            <li> <button class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-down"></i> متقاعد (ة) وأريد أن أستثمر وقتي </span></button></li>
                           </ul>
                         </ul>
                       </div>
@@ -97,8 +99,8 @@ const MainPage = () => {
                       <div class="question-text">هل تفضل الإشتغال من الجوال او الحاسوب ؟</div>
                       <div class="answers">
                         <ul class="answer-list">
-                          <li> <a class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-up"></i> الحاسوب</span></a> </li>
-                          <li> <a class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-down"></i>  الجوال</span></a> </li>
+                          <li> <button class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-up"></i> الحاسوب</span></button> </li>
+                          <li> <button class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-down"></i>  الجوال</span></button> </li>
                         </ul>
                       </div>
                     </div>
@@ -109,14 +111,14 @@ const MainPage = () => {
                       <div class="question-text">عندك تجربة من قبل في تجارة نفط أرامكو؟</div>
                       <div class="answers">
                         <ul class="answer-list">
-                          <li> <a class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-up"></i>  نعم</span></a> </li>
-                          <li> <a class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-down"></i>لا </span></a> </li>
+                          <li> <button class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-up"></i>  نعم</span></button> </li>
+                          <li> <button class="btn rollover" onClick={setAnswer}><span><i class="fa fa-thumbs-down"></i>لا </span></button> </li>
                         </ul>
                       </div>
                     </div>
                   }
                   {step > 3 && (
-                    <form action="/" method="post" onSubmit={onSubmit} data-abide novalidate class="registration-form home-registration-form" id="subscribe-form">
+                    <form action="/" method="post" onSubmit={onSubmit} data-abide noValidate class="registration-form home-registration-form" id="subscribe-form">
                       {/* <input class="input-field" type="hidden" id="Source" name="Source" />
                       <input type="hidden" id="country_name" name="country_name" value="" />
                       <input type="hidden" id="Country" name="Country" value="" />
@@ -131,7 +133,7 @@ const MainPage = () => {
                             <div class="form-group">
                               <input type="email" id="email" name="email" onChange={setInputData} placeholder="البريد الالكتروني" required/>
                             </div>
-                            <li> <a class="btn rollover" onClick={() => { setStep(step+1)}}><span><i class="fa fa-thumbs-down"></i>التالي</span></a> </li>
+                            <li> <button class="btn rollover" onClick={() => { setStep(step+1)}}><span><i class="fa fa-thumbs-down"></i>التالي</span></button> </li>
                           </ul>
                         </div>
                       </div>
@@ -145,7 +147,7 @@ const MainPage = () => {
                             <div class="form-group">
                               <input type="number" id="age" name="age" onChange={setInputData} placeholder="العمر" required />
                             </div>
-                            <li> <a class="btn rollover " onClick={() => { setStep(step+1)}}><span><i class="fa fa-thumbs-down"></i>التالي </span></a> </li>
+                            <li> <button class="btn rollover " onClick={() => { setStep(step+1)}}><span><i class="fa fa-thumbs-down"></i>التالي </span></button> </li>
                           </ul>
                         </div>
                       </div>
@@ -179,7 +181,7 @@ const MainPage = () => {
         <div class="container">
           <div class="row row-title">
             <div class="top-title">
-              <img src={chatIcon} width="80px" />
+              <img src={chatIcon} width="80px" alt='icon' />
               <span>
                 تعليقات<br />
                             المستثمرين
