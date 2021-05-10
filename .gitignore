@@ -7,6 +7,9 @@ bin-release/
 node_modules/
 # Other files and folders
 .settings/
+.env
+package-lock.json
+yarn.lock
 
 # Executables
 *.swf

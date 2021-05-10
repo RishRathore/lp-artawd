@@ -2,7 +2,6 @@ import React from 'react'
 import viciImg from './image/vici.jpg'
 import halalImg from './image/halal.png'
 
-
 const Header = () => {
   return (
     < >
