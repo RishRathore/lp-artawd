@@ -5,11 +5,11 @@ import halalImg from './image/halal.png'
 
 const Header = () => {
   return (
-    <>
-      <div class="halal-options collapse" id="collapseExample" >
-        <div class="container">
-          <div class="row">
-            <ul class="col-md-8 mr-auto">
+    < >
+      <div className="halal-options body_content collapse" id="collapseExample" >
+        <div className="container">
+          <div className="row">
+            <ul className="col-md-8 mr-auto">
               <li>بامكانك ان تفتتح حساب إسلامي</li>
               <li>دون فوائد وربا</li>
               <li>دون عمولات على السحب والايداع</li>
@@ -22,7 +22,7 @@ const Header = () => {
         </div>
       </div>
 
-      <header className="main-header">
+      <header className="main-header body_content">
         <div className="header-overlay">
           <div className="container">
             <div className="row">

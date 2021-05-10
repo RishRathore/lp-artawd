@@ -18,7 +18,7 @@ const MainPage = () => {
     <>
       <Header />
 
-      <div class="steps-quize-section">
+      <div class="steps-quize-section body_content">
         <div class="container">
           <div class="row row-first-end">
             {/* <!-- questionBox End --> */}
@@ -127,7 +127,7 @@ const MainPage = () => {
       </div>
                           
 
-      <div class="section-facebook-comment">
+      <div class="section-facebook-comment body_content">
         <div class="container">
           <div class="row row-title">
             <div class="top-title">

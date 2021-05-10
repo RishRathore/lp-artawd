@@ -31,7 +31,9 @@ p {
 h4 {
   font-family: 'Cairo', sans-serif!important;
 }
-
+.body_style {
+  font-family: 'Cairo', sans-serif!important;
+}
 /* 
 body {
   font-family: 'Cairo', sans-serif!important;

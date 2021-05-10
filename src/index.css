@@ -1,4 +1,4 @@
-body {
+.body_content {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Tajawal', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -356,5 +356,31 @@ input {
   top: 50%;
   right: 0;
   transform: translate(0, -50%);
+}
+/* responsiveness
+ */
+
+ @media (max-width: 1024px) {
+  header.main-header .header-overlay {
+      background-position: left -15px bottom;
+  }
+  }
+
+ @media (max-width: 991px) {
+header.main-header .header-overlay {
+    background-position: left -82px bottom;
+}
+ }
+
+ @media (max-width: 767px) {
+header.main-header .header-overlay {
+    background: #fff;
+    padding: 50px 15px;
+}
+}
+@media (max-width: 767px) {
+.steps-quize-section .questionBox {
+    min-width: 100%;
+}
 }
 /* ===================== */
