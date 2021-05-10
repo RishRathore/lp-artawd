@@ -383,4 +383,14 @@ header.main-header .header-overlay {
     min-width: 100%;
 }
 }
+@media (max-width: 767px) {
+.halal-options { 
+    background: #E36E1F;
+}
+}
+@media (max-width: 575px) {
+.halal-options ul li {
+    width: 100%;
+}
+}
 /* ===================== */
